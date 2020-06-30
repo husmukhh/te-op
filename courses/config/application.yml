@@ -1,0 +1,14 @@
+spring:
+    profiles.active: local
+---
+spring:
+  profiles: local
+  application:
+        name: course-catlog   
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fresh_future
+    username: tiop
+    password: N0ki@6700
+  jpa:
+    show-sql: true
