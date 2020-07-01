@@ -3,7 +3,6 @@ package com.tiop.courses.beans;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -53,9 +52,8 @@ public class Course {
 	@Column(name="WR_Range")
 	private String rankingRange;
 	
-	
-	
-	public long getId() {
+		
+/*	public long getId() {
 		return id;
 	}
 	public void setId(long id) {
@@ -168,7 +166,7 @@ public class Course {
 	}
 	public void setRankingRange(String rankingRange) {
 		this.rankingRange = rankingRange;
-	}
+	}*/
 
 	
 	

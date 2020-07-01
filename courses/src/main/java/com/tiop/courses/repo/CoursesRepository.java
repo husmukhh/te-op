@@ -12,7 +12,7 @@ import com.tiop.courses.beans.Course;
 public interface CoursesRepository extends org.springframework.data.repository.Repository<Course,Long>{
 	
 	
-	@Query("SELECT cours FROM Course cours WHERE cours.name like  %?1% and cours.country = ?2")
+	@Query(countQuery = "select count(course.name) from Course course where course.name like  %?1% and course.country = ?2" , value ="select cours from Course cours where cours.name like  %?1% and cours.country = ?2")
 	public Page<Course> findByNameAndCountry(String name, String country ,Pageable pageable);
 	
 }

@@ -4,11 +4,15 @@ spring:
 spring:
   profiles: local
   application:
-        name: course-catlog   
+        name: course-catlog
+    
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/fresh_future
-    username: tiop
-    password: N0ki@6700
+    type: com.zaxxer.hikari.HikariDataSource  
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/fresh_future?&serverTimezone=UTC
+    username: root
+    password: N0ki@670
+    hikari:
+       idle-timeout: 100000
   jpa:
     show-sql: true
